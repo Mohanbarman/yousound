@@ -1,8 +1,12 @@
 {
-  "name": "@packages/google-oauth-api",
+  "name": "@packages/google-oauth",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
+  "scripts": {
+    "build:package": "tsc -b ."
+  },
   "dependencies": {
     "axios": "^0.21.1"
   },
