@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { youtubeApi } from "..";
 
-export const googleAuthorizationController = async (req: Request, res: Response) => {
+export const googleAuthorizationController = async (req: Request, res: Response): Promise<void> => {
   const authCode = req.query.code;
 
   if (typeof authCode !== "string") {

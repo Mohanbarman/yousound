@@ -7,6 +7,7 @@ import * as env from "./config/env";
 import * as AuthControllers from "./controllers/AuthControllers";
 import * as OauthControllers from "./controllers/OauthControllers";
 import * as UserControllers from "./controllers/UserControllers";
+import { authorizationMiddleware } from "./middlewares/authorizationMiddleware";
 
 const app = express();
 
@@ -29,6 +30,6 @@ app.get("/video/:videoId", (req, res) => {
 
 app.get("/login", AuthControllers.loginController);
 app.get("/oauth/google", OauthControllers.googleAuthorizationController);
-app.get("/me", UserControllers.meController);
+app.get("/me", authorizationMiddleware, UserControllers.meController);
 
 app.listen(env.PORT, () => console.log(`Alive on port ${env.PORT} 🚀`));

@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
-import { youtubeApi } from "..";
 
-export const meController = (req: Request, res: Response) => {
+export const meController = (req: Request, res: Response): void => {
   const authToken = req.cookies.Authorization;
 
   if (!authToken) {

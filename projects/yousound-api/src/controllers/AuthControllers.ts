@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { youtubeApi } from "..";
 
-export const loginController = (_: Request, res: Response) => {
+export const loginController = (_: Request, res: Response): void => {
   const googleOauthUrl = youtubeApi.getAuthUrl();
   res.send(`<a href='${googleOauthUrl}'>Login with google</a>`);
 };
