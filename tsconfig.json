@@ -4,6 +4,8 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "declaration": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "target": "ES6",
+    "moduleResolution": "node"
   }
 }
