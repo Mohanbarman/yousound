@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import querystring from "querystring";
-import { IApiCallReturn } from "@packages/types";
+import { IApiCallReturn, IOauthConfig } from "@packages/types";
 
-import { IOauthConfig } from "../types/oauth.types";
+import { IAccessTokenResponse, IUserInfoResponse } from "../types";
 import { createUrl } from "../utils";
 
 const ENDPOINTS = {
@@ -24,11 +24,11 @@ export default class GoogleOauth {
   /**
    * Google authentication url to consent screen
    */
-  get authUrl(): string {
+  authUrl(accessType: string): string {
     const options = {
       redirect_uri: this.config.redirectUri,
       client_id: this.config.clientId,
-      access_type: "online",
+      access_type: accessType,
       response_type: "code",
       prompt: "consent",
       scope: this.config.scopes.join(" "),
@@ -37,7 +37,11 @@ export default class GoogleOauth {
     return url;
   }
 
-  async getToken(code: string): Promise<IApiCallReturn<any>> {
+  /**
+   * Gets refresh token and access token from google oauth servers
+   * @param code Authentication code received after user gives consent
+   */
+  async getToken(code: string): Promise<IApiCallReturn<IAccessTokenResponse>> {
     const options = {
       code,
       client_id: this.config.clientId,
@@ -46,10 +50,33 @@ export default class GoogleOauth {
       grant_type: "authorization_code",
     };
     try {
-      const res = await axios.post(ENDPOINTS.TOKEN, querystring.stringify(options));
+      const res: AxiosResponse<IAccessTokenResponse> = await axios.post(
+        ENDPOINTS.TOKEN,
+        querystring.stringify(options)
+      );
       return { error: null, data: res.data };
     } catch (e) {
       return { error: e.message, data: null };
+    }
+  }
+
+  /**
+   * Get google user profile info
+   * @param tokenId
+   * @param accessToken
+   */
+  async getUserInfo(
+    tokenId: string,
+    accessToken: string
+  ): Promise<IApiCallReturn<IUserInfoResponse>> {
+    try {
+      const res = await axios.get(ENDPOINTS.GOOGLE_USER_INFO, {
+        params: { alt: "json", access_token: accessToken },
+        headers: { Authorization: `Bearer ${tokenId}` },
+      });
+      return { data: res.data, error: null };
+    } catch (e) {
+      return { data: null, error: e.message };
     }
   }
 }
