@@ -10,7 +10,11 @@ import { IOauthConfig } from "../types/oauth.types";
 export default class GoogleOauth {
   config: IOauthConfig;
   oauthclient: OAuth2Client;
-  private SCOPES = ["https://www.googleapis.com/auth/youtube.readonly"];
+  private SCOPES = [
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile",
+  ];
 
   constructor(config: IOauthConfig) {
     this.config = config;
