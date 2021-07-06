@@ -1,13 +1,20 @@
-import { IAccessTokenResponse } from "@packages/google-oauth";
 import { Request, Response } from "express";
-import { youtubeApi } from "..";
+import { getAudioUrl } from "@packages/youtube-dl";
 
-type Request_ = Request & { user: IAccessTokenResponse };
+export const playAudioController = async (req: Request, res: Response): Promise<void> => {
+  const videoId: string = req.params.id;
 
-export const getMyPlaylists = async (req: Request_, res: Response): Promise<void> => {
-  const playlists = await youtubeApi.getMyPlaylists(req.user.access_token, {
-    part: ["id"],
-    mine: true,
-  });
-  res.json(playlists);
+  const { data: audioUrl, error: audioUrlErr } = await getAudioUrl(videoId);
+
+  if (audioUrlErr) {
+    res.sendStatus(500);
+    return;
+  }
+
+  res.send(`
+  <audio controls>
+    <source src="${audioUrl}" type="audio/webm">
+    Your browser does not support the audio tag.
+  </audio>
+`);
 };
