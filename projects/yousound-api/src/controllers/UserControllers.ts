@@ -1,6 +1,8 @@
 import { IAccessTokenResponse } from "@packages/google-oauth";
 import { Request, Response } from "express";
-import { googleOauth } from "..";
+import { googleOauth, youtubeApi } from "..";
+
+type Request_ = Request & { user: IAccessTokenResponse };
 
 export const meController = async (
   req: Request & { user: IAccessTokenResponse },
@@ -16,4 +18,12 @@ export const meController = async (
   const userInfo = await googleOauth.getUserInfo(req.user.id_token, req.user.access_token);
 
   res.send(userInfo);
+};
+
+export const getMyPlaylists = async (req: Request_, res: Response): Promise<void> => {
+  const playlists = await youtubeApi.getMyPlaylists(req.user.access_token, {
+    part: ["id"],
+    mine: true,
+  });
+  res.json(playlists);
 };
