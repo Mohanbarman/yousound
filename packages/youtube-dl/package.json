@@ -1,0 +1,14 @@
+{
+  "name": "youtube-dl",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build:package": "tsc -b ."
+  },
+  "dependencies": {
+    "@packages/youtube-api": "1.0.0",
+    "@packages/types": "1.0.0"
+  }
+}
