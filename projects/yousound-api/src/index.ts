@@ -26,6 +26,7 @@ app.use(cookieParser());
 app.get("/login", AuthControllers.loginController);
 app.get("/oauth/google", OauthControllers.googleAuthorizationController);
 app.get("/me", authenticateUser, UserControllers.meController);
-app.get("/playlists", authenticateUser, VideoController.getMyPlaylists);
+app.get("/playlists", authenticateUser, UserControllers.getMyPlaylists);
+app.get("/video/:id", VideoController.playAudioController);
 
 app.listen(env.PORT, () => console.log(`Alive on port ${env.PORT} 🚀`));
