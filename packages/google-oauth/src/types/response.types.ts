@@ -8,11 +8,6 @@ export interface IAccessTokenResponse {
 }
 
 export interface IUserInfoResponse {
-  data: IUserInfoResponseData;
-  error: null | string;
-}
-
-export interface IUserInfoResponseData {
   id: string;
   email: string;
   verified_email: boolean;
@@ -21,4 +16,11 @@ export interface IUserInfoResponseData {
   family_name: string;
   picture: string;
   locale: string;
+}
+
+export interface IRefreshTokenResponse {
+  access_token: string;
+  expires_in: number;
+  scope: string;
+  token_type: string;
 }
