@@ -2,7 +2,11 @@ import axios, { AxiosResponse } from "axios";
 import querystring from "querystring";
 import { IApiCallReturn, IOauthConfig } from "@packages/types";
 
-import { IAccessTokenResponse, IUserInfoResponse } from "../types";
+import {
+  IAccessTokenResponse,
+  IUserInfoResponse,
+  IRefreshTokenResponse,
+} from "../types";
 import { createUrl } from "../utils";
 
 const ENDPOINTS = {
@@ -61,6 +65,32 @@ export default class GoogleOauth {
   }
 
   /**
+   * Get new access token using refresh token
+   * @endpoint https://oauth2.googleapis.com/token
+   * @param refreshToken
+   */
+  async refreshAccessToken(
+    refreshToken: string
+  ): Promise<IApiCallReturn<IRefreshTokenResponse>> {
+    const options = {
+      client_id: this.config.clientId,
+      client_secret: this.config.clientSecret,
+      grant_type: "refresh_token",
+      refresh_token: refreshToken,
+    };
+
+    try {
+      const res: AxiosResponse<IRefreshTokenResponse> = await axios.post(
+        ENDPOINTS.TOKEN,
+        querystring.stringify(options)
+      );
+      return { data: res.data, error: null };
+    } catch (e) {
+      return { data: e.response.data, error: e.message };
+    }
+  }
+
+  /**
    * Get google user profile info
    * @param tokenId
    * @param accessToken
@@ -76,7 +106,10 @@ export default class GoogleOauth {
       });
       return { data: res.data, error: null };
     } catch (e) {
-      return { data: null, error: e.message };
+      return {
+        data: null,
+        error: e.response?.data?.error?.message || e.message,
+      };
     }
   }
 }
