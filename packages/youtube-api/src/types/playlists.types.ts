@@ -1,5 +1,7 @@
 export interface IPlaylistsOptions {
-  part: Array<"contentDetails" | "id" | "localizations" | "player" | "snippet" | "status">;
+  part: Array<
+    "contentDetails" | "id" | "localizations" | "player" | "snippet" | "status"
+  >;
   channelId?: string;
   id?: string;
   mine?: boolean;
