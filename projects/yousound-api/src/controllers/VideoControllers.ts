@@ -1,20 +1,16 @@
 import { Request, Response } from "express";
 import { getAudioUrl } from "@packages/youtube-dl";
+import { buildResponse } from "../utils";
 
-export const playAudioController = async (req: Request, res: Response): Promise<void> => {
+export const getAudio = async (req: Request, res: Response): Promise<void> => {
   const videoId: string = req.params.id;
 
   const { data: audioUrl, error: audioUrlErr } = await getAudioUrl(videoId);
 
   if (audioUrlErr) {
-    res.sendStatus(500);
+    res.json({ error: audioUrlErr });
     return;
   }
 
-  res.send(`
-  <audio controls>
-    <source src="${audioUrl}" type="audio/webm">
-    Your browser does not support the audio tag.
-  </audio>
-`);
+  res.json(buildResponse({ success: true, data: audioUrl }));
 };
