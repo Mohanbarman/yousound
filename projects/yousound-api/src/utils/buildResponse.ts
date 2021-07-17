@@ -22,8 +22,8 @@ export interface IResponse<T, E> {
    */
   error?: {
     code: string;
-    description: string;
-    errors?: Array<E>;
+    description?: string;
+    validationErrors?: Array<E>;
   } | null;
 }
 
@@ -32,7 +32,7 @@ export interface IResponse<T, E> {
  * @param response
  */
 export const buildResponse = <T, E>(
-  response: IResponse<T, E>
+  response: Partial<IResponse<T, E>>
 ): IResponse<T, E> => {
   return {
     success: response.success || false,
