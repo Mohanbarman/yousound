@@ -4,19 +4,21 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "dev": "nodemon -e ts --exec ts-node src/index.ts",
+    "start": "ts-node src/app.ts",
+    "dev": "DEBUG=express-session tsnd --respawn src/app.ts",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/connect-mongodb-session": "^2.4.1",
+    "@types/connect-pg-simple": "^4.2.4",
     "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.12",
     "@types/express-session": "^1.17.4",
     "@types/jsonwebtoken": "^8.5.3",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^16.0.0",
+    "@types/yup": "^0.29.13",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",
     "eslint": "^7.30.0",
@@ -33,6 +35,7 @@
     "@packages/youtube-api": "1.0.0",
     "@packages/youtube-dl": "1.0.0",
     "connect-mongodb-session": "^2.4.1",
+    "connect-pg-simple": "^6.2.1",
     "cookie-parser": "^1.4.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
@@ -41,6 +44,10 @@
     "googleapis": "^80.1.0",
     "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.2"
+    "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node-dev": "^1.1.8",
+    "typeorm": "^0.2.34",
+    "yup": "^0.32.9"
   }
 }
