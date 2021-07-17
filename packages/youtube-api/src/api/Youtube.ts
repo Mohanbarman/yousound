@@ -1,6 +1,9 @@
 import { IOauthConfig, IApiCallReturn } from "@packages/types";
 import axios from "axios";
-import { IPlaylistsOptions, IPlaylistsResponse } from "../types/playlists.types";
+import {
+  IPlaylistsOptions,
+  IPlaylistsResponse,
+} from "../types/playlists.types";
 
 const ENDPOINTS = {
   PLAYLISTS: "https://www.googleapis.com/youtube/v3/playlists",
@@ -18,16 +21,19 @@ export default class YoutubeApi {
 
   async getMyPlaylists(
     accessToken: string,
-    options: IPlaylistsOptions
+    { part, ...options }: IPlaylistsOptions
   ): Promise<IApiCallReturn<IPlaylistsResponse>> {
     try {
       const res = await axios.get(ENDPOINTS.PLAYLISTS, {
-        params: options,
+        params: { part: part.join(","), ...options },
         headers: { Authorization: `Bearer ${accessToken}` },
       });
       return { data: res.data, error: null };
     } catch (e) {
-      return { data: null, error: e.message };
+      return {
+        data: null,
+        error: e?.response?.data?.error?.message || e.message,
+      };
     }
   }
 }
