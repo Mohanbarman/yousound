@@ -24,4 +24,12 @@ export const userErrors = {
       description: "Failed to get access token using oauth code",
     },
   }),
+
+  notFound: buildResponse({
+    success: false,
+    error: {
+      code: "USER_NOT_FOUND",
+      description: "Session not found",
+    },
+  }),
 };

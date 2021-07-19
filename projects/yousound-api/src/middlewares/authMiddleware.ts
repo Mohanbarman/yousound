@@ -1,7 +1,7 @@
 import { NextFunction, Response } from "express";
 
 import { TRequest } from "../types/context.types";
-import { responseErrors } from "../utils";
+import { userErrors } from "../errors";
 import { googleOauth } from "../app";
 import { userHelpers } from "../utils/userHelpers";
 
@@ -23,7 +23,7 @@ export const authenticateUser = async (
    * userID in session is not present
    */
   if (!userId) {
-    return res.json(responseErrors.UNAUTHENTICATED_USER);
+    return res.json(userErrors.unauthenticated);
   }
 
   /**
@@ -35,7 +35,7 @@ export const authenticateUser = async (
    * There is no user in database with this userId
    */
   if (!user) {
-    return res.json(responseErrors.AUTH_USER_NOT_FOUND);
+    return res.json(userErrors.notFound);
   }
 
   /**
@@ -54,7 +54,7 @@ export const authenticateUser = async (
     if (error) {
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       req.session.destroy(() => {}); // Clearing the user's session
-      return res.json(responseErrors.OAUTH_ACCESS_TOKEN);
+      return res.json(userErrors.newAccessToken);
     }
 
     // updating new access token in database

@@ -4,7 +4,7 @@ import { TRequest } from "../types/context.types";
 import { UserEntity } from "../entities";
 import { googleOauth } from "../app";
 import { userHelpers } from "../utils/userHelpers";
-import { responseErrors } from "../utils";
+import { userErrors } from "../errors";
 
 export const googleAuthorizationController = async (
   req: TRequest,
@@ -23,7 +23,7 @@ export const googleAuthorizationController = async (
 
   // failed to get oauth access token
   if (oauthToken.error) {
-    return res.json(responseErrors.OAUTH_CODE_FAILED);
+    return res.json(userErrors.codeFailed);
   }
 
   // getting general user info
