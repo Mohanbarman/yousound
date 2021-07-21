@@ -1,10 +1,18 @@
+import { TContentPart } from "./common.types";
+
+export interface IPlaylistsItemsOptions {
+  part: TContentPart;
+  playlistId: string;
+  maxResults: number;
+}
+
 export interface IPlaylistsOptions {
-  part: Array<
-    "contentDetails" | "id" | "localizations" | "player" | "snippet" | "status"
-  >;
+  part: TContentPart;
   channelId?: string;
   id?: string;
   mine?: boolean;
+  maxResults?: number;
+  pageToken?: string;
 }
 
 export interface IPlaylistsResponse {
@@ -14,7 +22,7 @@ export interface IPlaylistsResponse {
   items: IPlaylistItem[];
 }
 
-export interface IPlaylistItem {
+interface IPlaylistItem {
   kind: string;
   etag: string;
   id: string;
@@ -22,11 +30,11 @@ export interface IPlaylistItem {
   contentDetails: IPlaylistContentDetails;
 }
 
-export interface IPlaylistContentDetails {
+interface IPlaylistContentDetails {
   itemCount: number;
 }
 
-export interface IPlaylistSnippet {
+interface IPlaylistSnippet {
   publishedAt: string;
   channelId: string;
   title: string;
@@ -36,12 +44,12 @@ export interface IPlaylistSnippet {
   localized: IPlaylistLocalized;
 }
 
-export interface IPlaylistLocalized {
+interface IPlaylistLocalized {
   title: string;
   description: string;
 }
 
-export interface Thumbnails {
+interface Thumbnails {
   default: Default;
   medium: Default;
   high: Default;
@@ -49,13 +57,13 @@ export interface Thumbnails {
   maxres: Default;
 }
 
-export interface Default {
+interface Default {
   url: string;
   width: number;
   height: number;
 }
 
-export interface PageInfo {
+interface PageInfo {
   totalResults: number;
   resultsPerPage: number;
 }
