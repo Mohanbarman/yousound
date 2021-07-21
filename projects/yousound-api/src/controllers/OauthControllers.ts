@@ -5,8 +5,14 @@ import { UserEntity } from "../entities";
 import { googleOauth } from "../app";
 import { userHelpers } from "../utils/userHelpers";
 import { userErrors } from "../errors";
+import { buildResponse } from "../utils";
 
-export const googleAuthorizationController = async (
+/**
+ * - Fetches refresh and access token from google oauth api
+ * - Saves user info in database
+ * @route GET /oauth/google
+ */
+export const authorizeOauth = async (
   req: TRequest,
   res: Response
 ): Promise<any> => {
@@ -60,7 +66,8 @@ export const googleAuthorizationController = async (
 
   await userHelpers.save(newUser);
 
+  // setting user id in client session for authentication
   req.session.userID = newUser.id.toString();
 
-  res.redirect("/me");
+  res.json(buildResponse({ success: true, data: { authenticated: true } }));
 };
