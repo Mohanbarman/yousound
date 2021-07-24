@@ -5,7 +5,8 @@ config({ path: process.env["ENV"] === "production" ? ".env.prod" : ".env" });
 
 // server config
 export const PORT = parseInt(process.env["PORT"] || "4000");
-export const SESSION_SECRET = process.env["SESSION_SECRET"];
+export const SESSION_SECRET = process.env["SESSION_SECRET"] || "";
+export const SUCCESS_AUTH_URL = process.env["SUCCESS_AUTH_URL"] || "";
 
 // environment
 export const ENV = process.env["ENV"] || "dev";
@@ -39,3 +40,5 @@ if (!DB_PORT) envErr("DB_PORT");
 if (!DB_USERNAME) envErr("DB_USERNAME");
 if (!DB_PASS) envErr("DB_PASS");
 if (!DB_NAME) envErr("DB_NAME");
+if (!SUCCESS_AUTH_URL) envErr("SUCCESS_AUTH_URL");
+if (!SESSION_SECRET) envErr("SESSION_SECRET");

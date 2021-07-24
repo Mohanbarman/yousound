@@ -5,7 +5,7 @@ import { UserEntity } from "../entities";
 import { googleOauth } from "../app";
 import { userHelpers } from "../utils/userHelpers";
 import { userErrors } from "../errors";
-import { buildResponse } from "../utils";
+import { SUCCESS_AUTH_URL } from "../config/env";
 
 /**
  * - Fetches refresh and access token from google oauth api
@@ -49,7 +49,7 @@ export const authorizeOauth = async (
       Date.now() + oauthToken.data.expires_in * 1000
     );
     req.session.userID = dbUser.id.toString();
-    return res.redirect("/me");
+    return res.redirect(SUCCESS_AUTH_URL);
   }
 
   // creating new user
@@ -69,5 +69,5 @@ export const authorizeOauth = async (
   // setting user id in client session for authentication
   req.session.userID = newUser.id.toString();
 
-  res.json(buildResponse({ success: true, data: { authenticated: true } }));
+  res.redirect(SUCCESS_AUTH_URL);
 };
