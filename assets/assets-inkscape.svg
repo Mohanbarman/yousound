@@ -25,15 +25,16 @@
      showgrid="false"
      showborder="false"
      inkscape:snap-smooth-nodes="true"
-     inkscape:zoom="0.16324881"
-     inkscape:cx="76.570238"
-     inkscape:cy="2061.2708"
+     inkscape:zoom="0.19041982"
+     inkscape:cx="963.66017"
+     inkscape:cy="3594.6888"
      inkscape:window-width="1916"
      inkscape:window-height="1038"
      inkscape:window-x="0"
      inkscape:window-y="38"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g46683"
+     showguides="false" />
   <defs
      id="defs2">
     <filter
@@ -48,19 +49,6 @@
          inkscape:collect="always"
          stdDeviation="17.250136"
          id="feGaussianBlur31898" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
-       id="filter42851"
-       x="-0.15485662"
-       y="-0.64599877"
-       width="1.3097132"
-       height="2.2919975">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="47.919702"
-         id="feGaussianBlur42853" />
     </filter>
   </defs>
   <g
@@ -133,16 +121,8 @@
     <g
        id="g46683"
        inkscape:export-filename="/home/mohan/Dev/monorepos/yousound/assets/logo-word-light.png"
-       inkscape:export-xdpi="26.068192"
-       inkscape:export-ydpi="26.068192">
-      <rect
-         style="mix-blend-mode:normal;fill:#e5e5e5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.398106;stroke-linecap:round;paint-order:stroke markers fill;filter:url(#filter42851)"
-         id="rect42831"
-         width="743.95483"
-         height="178.33832"
-         x="-276.41498"
-         y="338.22696"
-         ry="21.342875" />
+       inkscape:export-xdpi="51.18539"
+       inkscape:export-ydpi="51.18539">
       <rect
          style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.398106;stroke-linecap:round;paint-order:stroke markers fill"
          id="rect32527"
@@ -170,30 +150,6 @@
          id="path46118"
          inkscape:connector-curvature="0"
          style="fill:#ff0000;stroke-width:1.18914" />
-      <path
-         class="st0"
-         d="m -90.738271,391.8145 c -1.664798,-6.18354 -6.540277,-11.05902 -12.723809,-12.72381 -11.29684,-3.09177 -56.48421,-3.09177 -56.48421,-3.09177 0,0 -45.18736,0 -56.48421,2.97285 -6.06462,1.6648 -11.05901,6.65919 -12.72381,12.84273 -2.97285,11.29684 -2.97285,34.72292 -2.97285,34.72292 0,0 0,23.545 2.97285,34.72292 1.6648,6.18354 6.54028,11.05902 12.72381,12.72381 11.41576,3.09177 56.48421,3.09177 56.48421,3.09177 0,0 45.18737,0 56.48421,-2.97285 6.183532,-1.6648 11.059011,-6.54028 12.723809,-12.72381 2.972853,-11.29684 2.972853,-34.72292 2.972853,-34.72292 0,0 0.118914,-23.545 -2.972853,-34.84184 z"
-         id="path46121"
-         inkscape:connector-curvature="0"
-         style="fill:#ff0000;stroke-width:1.18914" />
-      <path
-         id="path45828"
-         style="fill:#000000;fill-opacity:0.24;stroke-width:4.4036"
-         d="M -479.77734 1423.8477 L -532.41016 1560.6953 A 94.59467 94.59467 0 1 0 -440.63086 1604.2129 L -376.86328 1438.418 C -381.32375 1436.0457 -386.05839 1434.1236 -391.03711 1432.7832 C -407.40358 1428.304 -442.60287 1425.5511 -479.77734 1423.8477 z "
-         transform="scale(0.26458333)" />
-      <path
-         d="m -120.59791,423.64375 17.13583,-44.55307 c 0.71649,-1.86277 -1.31228,-4.37671 -4.53105,-5.61475 l -13.35444,-5.13647 c -3.2189,-1.23786 -6.40963,-0.73167 -7.12618,1.13117 l -16.40736,42.65919 a 25.028173,25.028173 0 1 0 24.28329,11.51388 z"
-         fill="#cccccc"
-         id="path32535"
-         style="fill:#ffffff;fill-opacity:1;stroke-width:1.16512" />
-      <circle
-         cx="94.187721"
-         cy="449.63971"
-         r="11.022097"
-         fill="#ff6584"
-         id="circle32537"
-         style="fill:#ff0000;fill-opacity:1;stroke-width:1.16512"
-         transform="rotate(29.810963)" />
       <text
          xml:space="preserve"
          style="font-size:76.374px;line-height:1.25;font-family:'Andoly Cokie';-inkscape-font-specification:'Andoly Cokie';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke-width:1.36382"
@@ -205,6 +161,64 @@
            style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Poppins;-inkscape-font-specification:'Poppins Semi-Bold';fill:#000000;fill-opacity:1;stroke-width:1.36382"
            x="-16.253765"
            y="455.4881">YOUSOUND</tspan></text>
+      <g
+         id="g46834">
+        <path
+           class="st0"
+           d="m -90.738271,391.8145 c -1.664798,-6.18354 -6.540277,-11.05902 -12.723809,-12.72381 -11.29684,-3.09177 -56.48421,-3.09177 -56.48421,-3.09177 0,0 -45.18736,0 -56.48421,2.97285 -6.06462,1.6648 -11.05901,6.65919 -12.72381,12.84273 -2.97285,11.29684 -2.97285,34.72292 -2.97285,34.72292 0,0 0,23.545 2.97285,34.72292 1.6648,6.18354 6.54028,11.05902 12.72381,12.72381 11.41576,3.09177 56.48421,3.09177 56.48421,3.09177 0,0 45.18737,0 56.48421,-2.97285 6.183532,-1.6648 11.059011,-6.54028 12.723809,-12.72381 2.972853,-11.29684 2.972853,-34.72292 2.972853,-34.72292 0,0 0.118914,-23.545 -2.972853,-34.84184 z"
+           id="path46121"
+           inkscape:connector-curvature="0"
+           style="fill:#ff0000;stroke-width:1.18914" />
+        <path
+           id="path45828"
+           style="fill:#000000;fill-opacity:0.24;stroke-width:4.4036"
+           d="M -479.77734 1423.8477 L -532.41016 1560.6953 A 94.59467 94.59467 0 1 0 -440.63086 1604.2129 L -376.86328 1438.418 C -381.32375 1436.0457 -386.05839 1434.1236 -391.03711 1432.7832 C -407.40358 1428.304 -442.60287 1425.5511 -479.77734 1423.8477 z "
+           transform="scale(0.26458333)" />
+        <path
+           d="m -120.59791,423.64375 17.13583,-44.55307 c 0.71649,-1.86277 -1.31228,-4.37671 -4.53105,-5.61475 l -13.35444,-5.13647 c -3.2189,-1.23786 -6.40963,-0.73167 -7.12618,1.13117 l -16.40736,42.65919 a 25.028173,25.028173 0 1 0 24.28329,11.51388 z"
+           fill="#cccccc"
+           id="path32535"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.16512" />
+        <circle
+           cx="94.187721"
+           cy="449.63971"
+           r="11.022097"
+           fill="#ff6584"
+           id="circle32537"
+           style="fill:#ff0000;fill-opacity:1;stroke-width:1.16512"
+           transform="rotate(29.810963)" />
+      </g>
+      <g
+         id="g48307"
+         transform="translate(354.60411,588.61919)"
+         inkscape:export-filename="/home/mohan/logo-icon.png"
+         inkscape:export-xdpi="211.13539"
+         inkscape:export-ydpi="211.13539">
+        <path
+           class="st0"
+           d="m -90.738271,391.8145 c -1.664798,-6.18354 -6.540277,-11.05902 -12.723809,-12.72381 -11.29684,-3.09177 -56.48421,-3.09177 -56.48421,-3.09177 0,0 -45.18736,0 -56.48421,2.97285 -6.06462,1.6648 -11.05901,6.65919 -12.72381,12.84273 -2.97285,11.29684 -2.97285,34.72292 -2.97285,34.72292 0,0 0,23.545 2.97285,34.72292 1.6648,6.18354 6.54028,11.05902 12.72381,12.72381 11.41576,3.09177 56.48421,3.09177 56.48421,3.09177 0,0 45.18737,0 56.48421,-2.97285 6.183532,-1.6648 11.059011,-6.54028 12.723809,-12.72381 2.972853,-11.29684 2.972853,-34.72292 2.972853,-34.72292 0,0 0.118914,-23.545 -2.972853,-34.84184 z"
+           id="path48299"
+           inkscape:connector-curvature="0"
+           style="fill:#ff0000;stroke-width:1.18914" />
+        <path
+           id="path48301"
+           style="fill:#000000;fill-opacity:0.24;stroke-width:4.4036"
+           d="m -479.77734,1423.8477 -52.63282,136.8476 a 94.59467,94.59467 0 1 0 91.7793,43.5176 l 63.76758,-165.7949 c -4.46047,-2.3723 -9.19511,-4.2944 -14.17383,-5.6348 -16.36647,-4.4792 -51.56576,-7.2321 -88.74023,-8.9355 z"
+           transform="scale(0.26458333)" />
+        <path
+           d="m -120.59791,423.64375 17.13583,-44.55307 c 0.71649,-1.86277 -1.31228,-4.37671 -4.53105,-5.61475 l -13.35444,-5.13647 c -3.2189,-1.23786 -6.40963,-0.73167 -7.12618,1.13117 l -16.40736,42.65919 a 25.028173,25.028173 0 1 0 24.28329,11.51388 z"
+           fill="#cccccc"
+           id="path48303"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.16512" />
+        <circle
+           cx="94.187721"
+           cy="449.63971"
+           r="11.022097"
+           fill="#ff6584"
+           id="circle48305"
+           style="fill:#ff0000;fill-opacity:1;stroke-width:1.16512"
+           transform="rotate(29.810963)" />
+      </g>
     </g>
   </g>
   <style
