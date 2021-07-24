@@ -26,8 +26,8 @@
      showborder="false"
      inkscape:snap-smooth-nodes="true"
      inkscape:zoom="0.19041982"
-     inkscape:cx="963.66017"
-     inkscape:cy="3594.6888"
+     inkscape:cx="-207.43639"
+     inkscape:cy="3972.8007"
      inkscape:window-width="1916"
      inkscape:window-height="1038"
      inkscape:window-x="0"
@@ -191,9 +191,9 @@
       <g
          id="g48307"
          transform="translate(354.60411,588.61919)"
-         inkscape:export-filename="/home/mohan/logo-icon.png"
-         inkscape:export-xdpi="211.13539"
-         inkscape:export-ydpi="211.13539">
+         inkscape:export-filename="/home/mohan/Dev/monorepos/yousound/projects/yousound-web/src/assets/favicon.png"
+         inkscape:export-xdpi="82.068047"
+         inkscape:export-ydpi="82.068047">
         <path
            class="st0"
            d="m -90.738271,391.8145 c -1.664798,-6.18354 -6.540277,-11.05902 -12.723809,-12.72381 -11.29684,-3.09177 -56.48421,-3.09177 -56.48421,-3.09177 0,0 -45.18736,0 -56.48421,2.97285 -6.06462,1.6648 -11.05901,6.65919 -12.72381,12.84273 -2.97285,11.29684 -2.97285,34.72292 -2.97285,34.72292 0,0 0,23.545 2.97285,34.72292 1.6648,6.18354 6.54028,11.05902 12.72381,12.72381 11.41576,3.09177 56.48421,3.09177 56.48421,3.09177 0,0 45.18737,0 56.48421,-2.97285 6.183532,-1.6648 11.059011,-6.54028 12.723809,-12.72381 2.972853,-11.29684 2.972853,-34.72292 2.972853,-34.72292 0,0 0.118914,-23.545 -2.972853,-34.84184 z"
@@ -216,6 +216,61 @@
            r="11.022097"
            fill="#ff6584"
            id="circle48305"
+           style="fill:#ff0000;fill-opacity:1;stroke-width:1.16512"
+           transform="rotate(29.810963)" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:76.374px;line-height:1.25;font-family:'Andoly Cokie';-inkscape-font-specification:'Andoly Cokie';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke-width:1.36382"
+         x="311.8721"
+         y="1037.7573"
+         id="text855"
+         inkscape:export-filename="/home/mohan/Dev/monorepos/yousound/projects/yousound-web/src/assets/yousound-word-dark.png"
+         inkscape:export-xdpi="82.068047"
+         inkscape:export-ydpi="82.068047"><tspan
+           sodipodi:role="line"
+           id="tspan853"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Poppins;-inkscape-font-specification:'Poppins Semi-Bold';fill:#000000;fill-opacity:1;stroke-width:1.36382"
+           x="311.8721"
+           y="1037.7573">YOUSOUND</tspan></text>
+      <rect
+         style="opacity:0.386693;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:round;paint-order:stroke markers fill"
+         id="rect3827"
+         width="190.66168"
+         height="190.66168"
+         x="-201.87669"
+         y="989.41455"
+         inkscape:export-filename="/home/mohan/Dev/monorepos/yousound/projects/yousound-web/src/assets/yousound-icon.png"
+         inkscape:export-xdpi="159.86432"
+         inkscape:export-ydpi="159.86432" />
+      <g
+         id="g3917"
+         transform="matrix(1.1884399,0,0,1.1884399,83.540339,582.78521)"
+         inkscape:export-filename="/home/mohan/Dev/monorepos/yousound/projects/yousound-web/src/assets/yousound-icon.png"
+         inkscape:export-xdpi="159.86432"
+         inkscape:export-ydpi="159.86432">
+        <path
+           class="st0"
+           d="m -90.738271,391.8145 c -1.664798,-6.18354 -6.540277,-11.05902 -12.723809,-12.72381 -11.29684,-3.09177 -56.48421,-3.09177 -56.48421,-3.09177 0,0 -45.18736,0 -56.48421,2.97285 -6.06462,1.6648 -11.05901,6.65919 -12.72381,12.84273 -2.97285,11.29684 -2.97285,34.72292 -2.97285,34.72292 0,0 0,23.545 2.97285,34.72292 1.6648,6.18354 6.54028,11.05902 12.72381,12.72381 11.41576,3.09177 56.48421,3.09177 56.48421,3.09177 0,0 45.18737,0 56.48421,-2.97285 6.183532,-1.6648 11.059011,-6.54028 12.723809,-12.72381 2.972853,-11.29684 2.972853,-34.72292 2.972853,-34.72292 0,0 0.118914,-23.545 -2.972853,-34.84184 z"
+           id="path3909"
+           inkscape:connector-curvature="0"
+           style="fill:#ff0000;stroke-width:1.18914" />
+        <path
+           id="path3911"
+           style="fill:#000000;fill-opacity:0.24;stroke-width:4.4036"
+           d="m -479.77734,1423.8477 -52.63282,136.8476 a 94.59467,94.59467 0 1 0 91.7793,43.5176 l 63.76758,-165.7949 c -4.46047,-2.3723 -9.19511,-4.2944 -14.17383,-5.6348 -16.36647,-4.4792 -51.56576,-7.2321 -88.74023,-8.9355 z"
+           transform="scale(0.26458333)" />
+        <path
+           d="m -120.59791,423.64375 17.13583,-44.55307 c 0.71649,-1.86277 -1.31228,-4.37671 -4.53105,-5.61475 l -13.35444,-5.13647 c -3.2189,-1.23786 -6.40963,-0.73167 -7.12618,1.13117 l -16.40736,42.65919 a 25.028173,25.028173 0 1 0 24.28329,11.51388 z"
+           fill="#cccccc"
+           id="path3913"
+           style="fill:#ffffff;fill-opacity:1;stroke-width:1.16512" />
+        <circle
+           cx="94.187721"
+           cy="449.63971"
+           r="11.022097"
+           fill="#ff6584"
+           id="circle3915"
            style="fill:#ff0000;fill-opacity:1;stroke-width:1.16512"
            transform="rotate(29.810963)" />
       </g>
